@@ -50,6 +50,8 @@ button {
   position: absolute;
   inset: 0;
   z-index: 1;
+  opacity: 0;
+  transition: opacity 160ms ease;
 }
 
 .turntable-canvas {
@@ -85,6 +87,10 @@ body.is-hovering-model .turntable-canvas {
 
 body[data-compare-mode="model"] .turntable-canvas {
   opacity: 0;
+}
+
+body[data-compare-mode="model"] .model-canvas {
+  opacity: 1;
 }
 
 body[data-compare-mode="sequence"] .model-canvas {
