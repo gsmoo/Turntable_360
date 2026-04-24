@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vespa Turntable</title>
+    <script type="module" src="/src/turntable-main.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <section class="canvas-wrap">
+        <canvas class="model-canvas" aria-hidden="true"></canvas>
+        <canvas class="bloom-canvas" aria-hidden="true"></canvas>
+        <canvas class="turntable-canvas" aria-label="Turntable de la Vespa"></canvas>
+        <div class="color-menu" aria-label="Selector de color">
+          <button class="color-button is-active" data-color="yellow" type="button" aria-label="Color amarillo">
+            Amarillo
+          </button>
+          <button class="color-button" data-color="red" type="button" aria-label="Color rojo">
+            Rojo
+          </button>
+        </div>
+        <div class="compare-mode" aria-live="polite">Overlay</div>
+        <div class="frame-indicator" aria-live="polite">Anim_Body_Yellow0000.webp</div>
+        <div class="loading" aria-live="polite">
+          <p class="loading-label">Cargando turntable</p>
+          <p class="loading-progress">0 / 42</p>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>

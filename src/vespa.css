@@ -1,0 +1,145 @@
+:root {
+  color-scheme: light;
+  font-family: "Instrument Sans", "Helvetica Neue", sans-serif;
+  background: #ffffff;
+  color: #111111;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: #ffffff;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    linear-gradient(rgba(28, 61, 90, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(28, 61, 90, 0.03) 1px, transparent 1px);
+  background-size: 30px 30px;
+  mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.7), transparent 85%);
+}
+
+#app,
+p,
+h1 {
+  margin: 0;
+}
+
+#app {
+  position: relative;
+}
+
+h1 {
+  font-size: clamp(3rem, 8vw, 6.5rem);
+  line-height: 0.95;
+  max-width: 10ch;
+}
+
+.canvas-wrap {
+  position: fixed;
+  inset: 0;
+}
+
+.model-canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.overlay-copy {
+  position: absolute;
+  top: 18%;
+  left: 3rem;
+  z-index: 2;
+  width: min(720px, calc(100% - 3rem));
+  opacity: 0;
+  pointer-events: none;
+  transform: translate3d(0, -36px, 0);
+}
+
+.intro-copy h1,
+.secondary-copy h1 {
+  color: #111111;
+}
+
+.secondary-copy h1 {
+  max-width: 12ch;
+}
+
+.frame-indicator {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  z-index: 3;
+  font-size: 0.95rem;
+  line-height: 1;
+  color: #0a9f3f;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
+.loading {
+  position: absolute;
+  right: 1.5rem;
+  bottom: 1.5rem;
+  z-index: 3;
+  display: grid;
+  gap: 0.3rem;
+  padding: 0.85rem 1rem;
+  border: 1px solid rgba(28, 61, 90, 0.15);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(10px);
+  transition: opacity 200ms ease, transform 200ms ease;
+}
+
+.loading.is-hidden {
+  opacity: 0;
+  transform: translateY(10px);
+  pointer-events: none;
+}
+
+.loading-label,
+.loading-progress {
+  font-size: 0.8rem;
+  line-height: 1;
+}
+
+.scroll-spacer {
+  position: relative;
+  z-index: 1;
+  min-height: 600vh;
+}
+
+@media (max-width: 720px) {
+  .frame-indicator {
+    top: 1rem;
+    right: 1rem;
+  }
+
+  .loading {
+    right: 1rem;
+    bottom: 1rem;
+  }
+
+  .overlay-copy {
+    left: 1rem;
+    width: min(100% - 2rem, 34rem);
+  }
+
+  h1 {
+    max-width: 8ch;
+  }
+}

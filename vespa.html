@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vespa GLB Scroll</title>
+    <script type="module" src="/src/vespa-main.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <section class="canvas-wrap">
+        <canvas class="model-canvas" aria-label="Escena 3D con camara animada"></canvas>
+        <div class="overlay-copy intro-copy" aria-hidden="true">
+          <h1>Bienvenido a Three.js</h1>
+        </div>
+        <div class="overlay-copy secondary-copy" aria-hidden="true">
+          <h1>Vamos a descubrir las posibilidades que ofrece</h1>
+        </div>
+        <div class="frame-indicator" aria-live="polite">Cargando GLB...</div>
+        <div class="loading" aria-live="polite">
+          <p class="loading-label">Cargando modelo</p>
+          <p class="loading-progress">0%</p>
+        </div>
+      </section>
+
+      <section class="scroll-spacer" aria-hidden="true"></section>
+    </div>
+  </body>
+</html>
