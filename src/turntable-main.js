@@ -16,7 +16,7 @@ const colorButtons = Array.from(document.querySelectorAll('.color-button'));
 
 const totalFrames = 181;
 const totalColorVariants = 2;
-const frameCacheRadius = 10;
+const frameCacheRadius = 20;
 const dragSensitivity = 0.18;
 const inertiaDamping = 0.5;
 const minimumVelocity = 0.012;
