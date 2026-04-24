@@ -746,7 +746,8 @@ function tick() {
     }
   }
 
-  currentModelFrame = wrapFrame(Math.round(state.currentFrame));
+  const displayedFrame = state.renderedFrame >= 0 ? state.renderedFrame : wrapFrame(Math.round(state.currentFrame));
+  currentModelFrame = displayedFrame;
 
   if (currentModelFrame !== state.cacheCenterFrame) {
     state.cacheCenterFrame = currentModelFrame;
